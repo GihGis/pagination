@@ -1,0 +1,156 @@
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+   <link href="assets/css/bootstrap.css" rel="stylesheet" media="screen"> 
+   <link href="assets/open-iconic/font/css/open-iconic.css" rel="stylesheet" media="screen"> 
+  </head>
+  <body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+		<h1>TEST TITLE</h1>
+
+    <div class="col">
+		<h1>Test List</h1>
+	
+		<table class="table table-hover" id="paginacao-ajax">
+			  <thead>
+				<tr>
+				  <th >#</th>
+				  <th style="display:none">id</th>
+				  <th>collumn 1</th>
+				  <th>collumn 2</th>
+				  <th>collumn 3</th>
+				  <th>collumn 4</th>
+				  <th>collumn 5</th>
+
+				</tr>
+			  </thead>
+  			  <tbody>
+              <tr>
+                <th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+					<td style="display:none">79</td>
+					<td>teste1</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+
+                </tr>
+                <tr>
+					<th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+					<td style="display:none">78</td>
+					<td>teste2</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td></td>
+
+                </tr>
+                <tr>
+					<th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+					<td style="display:none">77</td>
+					<td>teste3</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td></td>
+
+                </tr>
+                <tr>
+					<th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+					<td style="display:none">76</td>
+					<td>teste4</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td></td>
+
+                </tr>
+                <tr>
+					<th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+					<td style="display:none">75</td>
+					<td>teste5</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td></td>
+
+                </tr>
+                 <tr>
+					<th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+					<td style="display:none">74</td>
+					<td>teste6</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td>CONTENT</td>
+					<td></td>
+
+                </tr>
+					<tr>
+						<th scope="row"><label class="custom-control custom-checkbox"><input type="checkbox" name="chkOne" class="form-check-input"></label></th>
+						<td style="display:none">73</td>
+						<td>teste7</td>
+						<td>CONTENT</td>
+						<td>CONTENT</td>
+						<td>CONTENT</td>
+						<td></td>
+					</tr>
+                 </tbody>
+</table>
+
+
+        <div class="container-fluid">
+ 			<nav aria-label="Page navigation example">
+            <ul class="pagination"><li class='page-item'><a href='#' class='page-link' data-href='1'>First</a></li><li class='page-item'><a href='#' class='page-link' data-href='1'>Back</a></li><li class='page-item'><a href='#' class='page-link' data-href='1'>1</a></li>2<li class='page-item'><a href='#' class='page-link' data-href='2' style='color:red;'>2</a></li><li class='page-item'><a href='#' class='page-link' data-href='3'>3</a></li><li class='page-item'><a href='#' class='page-link' data-href='4'>4</a></li><li class='page-item'><a href='#' class='page-link' data-href='5'>5</a></li><li class='page-item'><a href='#' class='page-link' data-href='6'>6</a></li><li class='page-item'><a href='#' class='page-link' data-href='7'>7</a></li><li class='page-item'><a href='#' class='page-link' data-href='8'>8</a></li><li class='page-item'><a href='#' class='page-link' data-href='9'>9</a></li><li class='page-item'><a href='#' class='page-link' data-href='10'>10</a></li><li class='page-item'><a href='#' class='page-link' data-href='3'>Next</a></li><li class='page-item'><a href='#' class='page-link' data-href='10'>Last</a></li></ul>        	</nav>
+        </div>
+
+
+      <button id="btn_edit_unidade" type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+     Editar
+</button>
+      <button id="btn_delete_unidade" type="button" class="btn btn-danger" data-toggle="modal" data-target="#formModalDelete">
+     Deletar
+</button>
+    </div>
+  </div>
+</div>  
+
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>	
+	
+	<script type="text/javascript">
+			$(document).ready(function () {
+
+
+				$('.page-link').click(function (e) {
+				   e.preventDefault();
+
+				  var url = $(this).attr('href');
+				   var page = $(this).attr('data-href');
+
+				   $.ajax({
+						  url: url,
+						 data: {
+							currentPage: page
+						 },  
+						 success: function (response) {
+
+						   var html = $('<h1/>', {html : response}).find('#paginacao-ajax');
+						   $('#paginacao-ajax').html( html )    
+
+
+						 }
+				   });
+				})
+
+			})
+	</script>
+	
+  </body>
+</html>
