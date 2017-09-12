@@ -29,8 +29,8 @@ $(document).ready(function () {
 $('.page-link').click(function (e) {
    e.preventDefault();
 
-   var url = $(this).data('href');
-   var page = $(this).data('data-href');
+   var url = $(this).attr('href');
+   var page = $(this).attr('data-href');
 
    $.ajax({
          type:"get",
