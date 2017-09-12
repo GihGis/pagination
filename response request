@@ -15,7 +15,7 @@
 		<h1>TEST TITLE</h1>
 
     <div class="col">
-		<h1>Test List</h1>
+		<h2>Test List</h2>
 	
 		<table class="table table-hover" id="paginacao-ajax">
 			  <thead>
