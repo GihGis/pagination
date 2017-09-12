@@ -22,11 +22,12 @@
 				<tr>
 				  <th >#</th>
 				  <th style="display:none">id</th>
-				  <th>collumn 1</th>
-				  <th>collumn 2</th>
-				  <th>collumn 3</th>
-				  <th>collumn 4</th>
-				  <th>collumn 5</th>
+				  <th>Nome</th>
+				  <th>Contato</th>
+				  <th>Telefone</th>
+				  <th>Endereco</th>
+				  <th>Cidade</th>
+
 
 				</tr>
 			  </thead>
