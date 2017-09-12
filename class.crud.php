@@ -68,8 +68,8 @@ public function dataview($query)
 			if($current_page!=1)
 			{
 				$previous =$current_page-1;
-				echo "<li class='page-item'><a href='currentPage=1' class='page-link' data-href='1'>First</a></li>";
-				echo "<li class='page-item'><a href='currentPage=".$previous."' class='page-link' data-href='".$previous."'>Back</a></li>";
+				echo "<li class='page-item'><a href='#' class='page-link' data-href='1'>First</a></li>";
+				echo "<li class='page-item'><a href='#' class='page-link' data-href='".$previous."'>Back</a></li>";
 
 			}
 			for($i=1;$i<=$total_no_of_pages;$i++)
@@ -77,19 +77,19 @@ public function dataview($query)
 				if($i==$current_page)
 				{
 					echo $current_page;
-					echo "<li class='page-item'><a href='currentPage=".$i."' class='page-link' data-href='".$i."' style='color:red;'>".$i."</a></li>";
+					echo "<li class='page-item'><a href='#' class='page-link' data-href='".$i."' style='color:red;'>".$i."</a></li>";
 				}
 				else
 				{
-					echo "<li class='page-item'><a href='currentPage=".$i."' class='page-link' data-href='".$i."'>".$i."</a></li>";
+					echo "<li class='page-item'><a href='#' class='page-link' data-href='".$i."'>".$i."</a></li>";
 				}
 			}
 			if($current_page!=$total_no_of_pages)
 			{
 				
 				$next=$current_page+1;
-				echo "<li class='page-item'><a href='currentPage=".$next."' class='page-link' data-href='".$next."'>Next</a></li>";
-				echo "<li class='page-item'><a href='currentPage=".$total_no_of_pages."' class='page-link' data-href='".$total_no_of_pages."'>Last</a></li>";
+				echo "<li class='page-item'><a href='#' class='page-link' data-href='".$next."'>Next</a></li>";
+				echo "<li class='page-item'><a href='#' class='page-link' data-href='".$total_no_of_pages."'>Last</a></li>";
 			}
 			?></ul><?php
 		}
